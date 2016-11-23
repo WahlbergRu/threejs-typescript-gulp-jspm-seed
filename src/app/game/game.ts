@@ -26,8 +26,13 @@ export class Game{
         this.camera.position.set( 20, 20, 20 ); // all components equal
         this.camera.lookAt( this.scene.position ); // or the origin
 
+
+        let gridHelper = new THREE.GridHelper( 10, 10, 0x000000, 0x000000 );
+        this.scene.add( gridHelper );
+
         // light
-        var light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 ); // soft white light
+        let light = new THREE.HemisphereLight( 0xc2f1ee, 0x0065b0, 1 ); // soft white light
+        light.position.set(-200, 100, 100);
         this.scene.add( light );
 
         //Render

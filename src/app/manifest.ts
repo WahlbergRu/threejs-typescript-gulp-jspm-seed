@@ -2,6 +2,7 @@ import {Game}  from './game/game';
 import {Api} from './api/api'
 import CubicGrid from './elements/cubic-grid';
 import Grid from './elements/grid';
+import Cloud from './resources/cloud/cloud';
 
 
 var dataRequest = {
@@ -26,5 +27,7 @@ Api.request(dataRequest).then(
 );
 
 Game.init();
-Game.component(Grid);
+
+Game.component(Cloud);
+// Game.component(Grid);
 Game.component(CubicGrid);
